@@ -1,0 +1,37 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<title>Xayona</title>
+<meta charset="UTF-8">
+<link rel="stylesheet" href="{% static 'css/style.css' %}" type="text/css">
+<!--[if IE 7]><link rel="stylesheet" href="css/ie7.css" type="text/css"><![endif]-->
+</head>
+<body>
+<div class="page">
+  <div class="header"> <a href="index.html" id="logo"><img src="{% static 'images/logo.gif' %}" alt=""></a>
+    <ul>
+      <li class="selected"><a href="{% url 'home-page' %}">Home</a></li>
+      <li><a href="{% url 'about-page' %}">About</a></li>
+      <li><a href="{% url 'blog-page' %}">Blog</a></li>
+      <li><a href="{% url 'services-page' %}">Services</a></li>
+    </ul>
+  </div>
+
+
+
+  {% block content %}
+  {% endblock content %}
+
+  <div class="footer">
+    <ul>
+      <li><a href="">Home</a></li>
+      <li><a href="{% url 'about-page' %}"></a>">About</a></li>
+      <li><a href="{% url 'blog-page' %}"></a>">Blog</a></li>
+    </ul>
+    <p>Copyright &copy; 2012 <a href="#">Company Name</a> All rights reserved | Website Template By <a target="_blank" href="http://www.freewebsitetemplates.com/">freewebsitetemplates.com</a></p>
+    <div class="connect"> <a href="#" id="facebook">facebook</a> <a href="#" id="twitter">twitter</a> <a href="#" id="vimeo">vimeo</a> </div>
+  </div>
+</div>
+</body>
+</html>
